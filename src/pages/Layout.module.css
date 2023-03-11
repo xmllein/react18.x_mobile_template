@@ -1,0 +1,15 @@
+.tabBar{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid  #eee;
+}
+
+.tabContent{
+  height: calc(100vh - 50px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
