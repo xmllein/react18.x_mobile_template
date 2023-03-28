@@ -1,0 +1,21 @@
+.password {
+  display: flex;
+  align-items: center;
+}
+
+.password .input{
+  flex: auto;
+}
+
+.password .eye{
+  flex: none;
+  margin-left: 16px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.password .eye svg{
+
+  width: 40px;
+  height: 40px;
+}
