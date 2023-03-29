@@ -9,6 +9,7 @@
 - [x] `react-redux`, `@reduxjs/toolkit`
 - [x] `antd-mobile`
 - [x] `git commit` 规范
+- [x] 'json-server' 模拟数据
 
 ## 参考资料
 

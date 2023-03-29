@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd-mobile": "^5.28.1",
     "antd-mobile-icons": "^0.3.0",
+    "axios": "^1.3.4",
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.2.3",
     "babel-plugin-named-asset-import": "^0.3.8",
@@ -72,7 +73,8 @@
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "prettier": "prettier --write src/**/*.js",
     "commit:comment": "引导设置规范化的提交信息",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "json-server": "json-server --watch  --routes ./mock/route.json ./mock/db.json --port 3004"
   },
   "config": {
     "commitizen": {
@@ -180,6 +182,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^7.0.0",
     "husky": "^8.0.3",
+    "json-server": "^0.17.3",
     "lint-staged": "^13.2.0"
   }
 }

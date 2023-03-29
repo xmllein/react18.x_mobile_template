@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Button, Form, Input, Space } from 'antd-mobile';
 import { useNavigate } from 'react-router-dom';
 import { EyeInvisibleOutline, EyeOutline } from 'antd-mobile-icons';
+import API from '../api';
+
 import styles from './Login.module.css';
 
 export default function Login() {
@@ -16,8 +18,10 @@ export default function Login() {
     }
   }, [navigate]);
 
-  const handleClick = () => {
+  const handleClick = async () => {
     // 登录成功后，将token存储到localStorage中
+    const result = await API.login('admin', '123456');
+    console.log(result);
     React.$setToken('123456');
     navigate('/home');
   };
