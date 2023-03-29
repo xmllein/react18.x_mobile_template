@@ -1,9 +1,16 @@
 import axios from 'axios';
 
+let baseURL = '';
+if (process.env.REACT_APP_ENV === 'development') {
+  baseURL = 'http://localhost:3000';
+} else if (process.env.REACT_APP_ENV === 'production') {
+  baseURL = 'http://yourdomain.com';
+} else if (process.env.REACT_APP_ENV === 'mock') {
+  baseURL = 'http://localhost:3004';
+}
+
 const service = axios.create({
-  // baseURL: process.env.REACT_APP_BASE_URL,
-  // mock
-  baseURL: 'http://localhost:3004',
+  baseURL,
   timeout: 5000,
 }); // Request interceptors
 
