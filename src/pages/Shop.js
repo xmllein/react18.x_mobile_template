@@ -1,6 +1,6 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { List, Image, PullToRefresh } from 'antd-mobile'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { List, Image, PullToRefresh } from 'antd-mobile';
 
 const userList = [
   {
@@ -23,11 +23,11 @@ const userList = [
     name: '小李',
     desc: '我是小李',
   },
-]
+];
 
 export default function Shop() {
   // 获取counter的值
-  const counter = useSelector((state) => state.counter)
+  const counter = useSelector((state) => state.counter);
   return (
     <div>
       <h1>Shop</h1>
@@ -36,12 +36,12 @@ export default function Shop() {
         onRefresh={async () => {
           await new Promise((resolve) => {
             setTimeout(() => {
-              resolve()
-            }, 2000)
-          })
+              resolve();
+            }, 2000);
+          });
         }}
       >
-        <List header='用户列表'>
+        <List header="用户列表">
           {userList.map((user) => (
             <List.Item
               key={user.name}
@@ -49,7 +49,7 @@ export default function Shop() {
                 <Image
                   src={user.avatar}
                   style={{ borderRadius: 20 }}
-                  fit='cover'
+                  fit="cover"
                   width={40}
                   height={40}
                 />
@@ -62,5 +62,5 @@ export default function Shop() {
         </List>
       </PullToRefresh>
     </div>
-  )
+  );
 }

@@ -1,10 +1,10 @@
 // 导入页面组件
-import Login from '../pages/Login'
-import Home from '../pages/Home'
-import Layout from '../pages/Layout'
-import Shop from '../pages/Shop'
-import My from '../pages/My'
-import Todo from '../pages/Todo'
+import Login from '../pages/Login';
+import Home from '../pages/Home';
+import Layout from '../pages/Layout';
+import Shop from '../pages/Shop';
+import My from '../pages/My';
+import Todo from '../pages/Todo';
 const routerList = [
   {
     path: '/login',
@@ -32,6 +32,6 @@ const routerList = [
       },
     ],
   },
-]
+];
 
-export default routerList
+export default routerList;

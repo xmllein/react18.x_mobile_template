@@ -1,18 +1,18 @@
-import React from 'react'
-import { Modal, Space, Button } from 'antd-mobile'
+import React from 'react';
+import { Modal, Space, Button } from 'antd-mobile';
 
 export default function Todo() {
   return (
     <div>
       <h1>Todo</h1>
-      <Space direction='vertical' block>
+      <Space direction="vertical" block>
         <Button
           block
           onClick={() =>
             Modal.alert({
               content: '人在天边月上明',
               onConfirm: () => {
-                console.log('Confirmed')
+                console.log('Confirmed');
               },
             })
           }
@@ -41,12 +41,12 @@ export default function Todo() {
                   text: '分享',
                 },
               ],
-            })
+            });
           }}
         >
           自定义按钮
         </Button>
       </Space>
     </div>
-  )
+  );
 }

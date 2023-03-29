@@ -1,8 +1,8 @@
-import React from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
-import { Badge, TabBar } from 'antd-mobile'
-import styles from './Layout.module.css'
-import { AuthComponents } from '../components/AuthRoute'
+import React from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { Badge, TabBar } from 'antd-mobile';
+import styles from './Layout.module.css';
+import { AuthComponents } from '../components/AuthRoute';
 
 import {
   AppOutline,
@@ -10,7 +10,7 @@ import {
   MessageFill,
   UnorderedListOutline,
   UserOutline,
-} from 'antd-mobile-icons'
+} from 'antd-mobile-icons';
 
 const tabs = [
   {
@@ -36,15 +36,15 @@ const tabs = [
     title: '我的',
     icon: <UserOutline />,
   },
-]
+];
 
 export default function Layout() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const tabChangeHandle = (key) => {
-    console.log(key)
-    navigate(key)
-  }
+    console.log(key);
+    navigate(key);
+  };
   return (
     <div>
       <AuthComponents>
@@ -60,5 +60,5 @@ export default function Layout() {
         </div>
       </AuthComponents>
     </div>
-  )
+  );
 }

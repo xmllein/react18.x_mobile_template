@@ -8,6 +8,7 @@
 - [x] `react-router-dom 6`
 - [x] `react-redux`, `@reduxjs/toolkit`
 - [x] `antd-mobile`
+- [x] `git commit` 规范
 
 ## 参考资料
 

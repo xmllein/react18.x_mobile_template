@@ -1,18 +1,18 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // 初始值
-const count = { num: 0 }
+const count = { num: 0 };
 // 创建异步
 export const counterAsyncIncrease = createAsyncThunk(
   'counter/increase',
   async (payload) => {
     const res = await new Promise((resolve) => {
       setTimeout(() => {
-        resolve(payload)
-      }, 1000)
-    })
-    return res
-  }
-)
+        resolve(payload);
+      }, 1000);
+    });
+    return res;
+  },
+);
 
 // 创建切片
 const counterSlice = createSlice({
@@ -20,23 +20,23 @@ const counterSlice = createSlice({
   initialState: count,
   reducers: {
     add(state) {
-      state.num++
+      state.num++;
     },
     sub(state) {
-      state.num--
+      state.num--;
     },
     addincrease(state, action) {
-      state.num += action.payload
+      state.num += action.payload;
     },
   },
   extraReducers: {
     // 处理异步
     [counterAsyncIncrease.fulfilled]: (state, action) => {
-      state.num += action.payload
+      state.num += action.payload;
     },
   },
-})
+});
 // 导出
-export const { add, sub, addincrease } = counterSlice.actions
+export const { add, sub, addincrease } = counterSlice.actions;
 // 导出
-export const counterReducer = counterSlice.reducer
+export const counterReducer = counterSlice.reducer;
